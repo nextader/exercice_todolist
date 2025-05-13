@@ -9,7 +9,7 @@
     <link href="css/theme.css" rel="stylesheet">
     <script type="module" src="js/app.js" async></script>
 </head>
-<body>
+<body class="bg-light">
 
     <section class="container py-5" id="todolist">
         <div class="card shadow-sm rounded-4 p-5">
@@ -25,20 +25,32 @@
             </form>
 
             <div class="btn-group mb-4 w-100" role="group">
-                <button type="button">Toutes</button>
-                <button type="button">À faire</button>
-                <button type="button">Faites</button>
+                <button type="button" class="btn btn-outline-primary active" data-filter="all">Toutes</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="todo">À faire</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="done">Faites</button>
             </div>
 
             <ul class="list-group">
-                <li class="">
+                <li class="todo list-group-item d-flex align-items-center justify-content-between">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="todo-1">
-                        <label class="form-check-label" for="todo-1">
+                        <label class="form-check-label ms-2" for="todo-1">
                             Tâche à faire 2
                         </label>
                     </div>
-                    <button>
+                    <button class="btn btn-danger btn-sm" aria-label="Supprimer">
+                        <i class="bi-trash"></i>
+                    </button>
+                </li>
+
+                <li class="todo list-group-item d-flex align-items-center justify-content-between">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="todo-2">
+                        <label class="form-check-label ms-2" for="todo-2">
+                            Tâche à faire 1
+                        </label>
+                    </div>
+                    <button class="btn btn-danger btn-sm" aria-label="Supprimer">
                         <i class="bi-trash"></i>
                     </button>
                 </li>
